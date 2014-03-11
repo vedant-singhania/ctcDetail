@@ -20,8 +20,12 @@ gem 'mysql2', '0.3.14'
 #gem "therubyracer", "~> 0.10.2"
 # less for rubyracer dependency 
 #gem "less-rails"
+
+# Simple Form
+gem "simple_form"
+
 # Twitter Bootstrap 
- gem "twitter-bootstrap-rails", :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem "twitter-bootstrap-rails", :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 # Use jquery as the JavaScript library
 gem "jquery-rails"
