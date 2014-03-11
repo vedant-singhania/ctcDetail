@@ -1,0 +1,31 @@
+<h1>Listing crews</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Car number</th>
+      <th>Driver name</th>
+      <th>Phone number</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @crews.each do |crew| %>
+      <tr>
+        <td><%= crew.car_number %></td>
+        <td><%= crew.driver_name %></td>
+        <td><%= crew.phone_number %></td>
+        <td><%= link_to 'Show', crew %></td>
+        <td><%= link_to 'Edit', edit_crew_path(crew) %></td>
+        <td><%= link_to 'Destroy', crew, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Crew', new_crew_path %>

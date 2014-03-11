@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Car number:</strong>
+  <%= @crew.car_number %>
+</p>
+
+<p>
+  <strong>Driver name:</strong>
+  <%= @crew.driver_name %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @crew.phone_number %>
+</p>
+
+<%= link_to 'Edit', edit_crew_path(@crew) %> |
+<%= link_to 'Back', crews_path %>
