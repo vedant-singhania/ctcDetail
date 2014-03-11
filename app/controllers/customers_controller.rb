@@ -38,7 +38,7 @@ class CustomersController < ApplicationController
       render action: 'edit'
     end
   end
-
+  
   # DELETE /customers/1
   def destroy
     @customer.destroy
