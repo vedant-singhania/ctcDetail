@@ -1,4 +1,6 @@
 CtcDetail::Application.routes.draw do
+  resources :crews
+
   resources :appointments
 
   resources :customers
