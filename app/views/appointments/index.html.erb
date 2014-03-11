@@ -8,6 +8,8 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
 
       <th><%= model_class.human_attribute_name(:first_name) %></th>
+      
+      <th><%= model_class.human_attribute_name(:last_name) %></th>
 
       <th><%= model_class.human_attribute_name(:package_name) %></th>
 
@@ -17,11 +19,9 @@
 
       <th><%= model_class.human_attribute_name(:number_of_cars) %></th>
 
-      <th><%= model_class.human_attribute_name(:location) %></th>
-
       <th><%= model_class.human_attribute_name(:location_type) %></th>
-
-      <th><%= model_class.human_attribute_name(:gender_of_customer) %></th>
+      
+      <th><%= model_class.human_attribute_name(:crew_car_number) %></th>
 
       
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
@@ -33,6 +33,8 @@
         <td><%= link_to appointment.id, appointment_path(appointment) %></td>
 
         <td><%= appointment.customer.first_name %></td>
+        
+        <td><%= appointment.customer.last_name %></td>
 
         <td><%= appointment.package.name%></td>
 
@@ -42,11 +44,9 @@
 
         <td><%= appointment.number_of_cars %></td>
 
-        <td><%= appointment.location %></td>
-
         <td><%= appointment.location_type %></td>
-
-        <td><%= appointment.gender_of_customer %></td>
+        
+        <td><%= appointment.crew.car_number %></td>
 
         
         <td>

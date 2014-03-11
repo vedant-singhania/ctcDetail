@@ -13,7 +13,7 @@
 
       <th><%= model_class.human_attribute_name(:price) %></th>
 
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -28,7 +28,7 @@
 
         <td><%= package.price %></td>
 
-        <td><%=l package.created_at %></td>
+        
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_package_path(package), :class => 'btn btn-mini' %>
