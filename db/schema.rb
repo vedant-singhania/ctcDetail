@@ -11,6 +11,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140311081445) do
+
+  create_table "appointments", force: true do |t|
+    t.integer  "customer_id"
+    t.integer  "package_id"
+    t.integer  "crew_id"
+    t.date     "appointment_date"
+    t.date     "appointments_today"
+    t.time     "appointment_time"
+    t.integer  "number_of_cars"
+    t.string   "location_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "appointments", ["customer_id", "package_id", "crew_id"], name: "index_appointments_on_customer_id_and_package_id_and_crew_id", using: :btree
+
+  create_table "crews", force: true do |t|
+    t.string   "car_number"
+    t.string   "driver_name"
+    t.string   "phone_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "customers", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.string   "gender_of_customer"
+    t.string   "car"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "packages", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
